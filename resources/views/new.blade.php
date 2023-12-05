@@ -1,7 +1,6 @@
 @extends ('layouts.mainlayout')
 @section('page_title', 'TelUFinds')
 @section('content')
-
     <h3>Add Product</h3>
         <div class="row">
             <form action="/product" method="post">
