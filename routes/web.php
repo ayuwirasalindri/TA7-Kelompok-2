@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\productscontroller;
 use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +28,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::get('/products', [productscontroller::class, 'index']);
-    Route::get('/product/{name}', [productscontroller::class, 'detail']);
+    Route::get('/product/{id}', [productscontroller::class, 'detail']);
     Route::get('/add-product', [productscontroller::class, 'new']);
     Route::post('/product', [productscontroller::class, 'store']);
     Route::get('/edit-product/{id}', [productscontroller::class, 'edit']);
     Route::put('/product/{id}', [productscontroller::class, 'update']);
-    Route::get('/delete-product/{name}', [productscontroller::class, 'delete']);
-    Route::delete('/product/{name}', [productscontroller::class, 'destroy']);
+    Route::get('/delete-product/{id}', [productscontroller::class, 'delete']);
+    Route::delete('/product/{id}', [productscontroller::class, 'destroy']);
 });
