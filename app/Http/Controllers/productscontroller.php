@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class productscontroller extends Controller
 {    public function index(Request $request)
     {
-        $products = Product::orderBy('name')->simplePaginate(10);
+        $products = Product::orderBy('id')->simplePaginate(6);
 
         return view('product.index', ['products' => $products]);
     }
@@ -75,3 +75,4 @@ class productscontroller extends Controller
         return redirect('/products');
     }
 }
+
