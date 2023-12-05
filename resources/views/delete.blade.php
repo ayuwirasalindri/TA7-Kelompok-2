@@ -6,9 +6,9 @@
         @csrf
         @method('delete')
         <div class="mt-5">
-            <p>Apakah Anda yakin akan menghapus data kategori <b>{{ $product->name}}</b>?</p>
-            <button type="submit" class="btn btn-danger mb-3">Ya</button>
-            <a href="/products" class="btn btn-secondary mb-3">Tidak</a>
+            <p>Are you sure you want to delete product data <b>{{ $product->name}}</b>?</p>
+            <button type="submit" class="btn btn-danger mb-3">Yes</button>
+            <a href="/products" class="btn btn-secondary mb-3">No</a>
         </div>
     </form>
 @endsection
