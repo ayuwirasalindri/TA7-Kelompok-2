@@ -15,7 +15,13 @@
                 </div>
             </div>
             <div class="form-group row mt-4">
-                <label for="text" class="col-2 col-form-label">Deskripsi</label>
+                <label for="picture" class="col-2 col-form-label">Product's Picture</label>
+                <div class="col-sm-5">
+                    <input type="file" class="form-control-file" id="picture" name="picture" value="{{ old('name', $product->picture)}}">
+                </div>
+            </div>
+            <div class="form-group row mt-4">
+                <label for="text" class="col-2 col-form-label">Description</label>
                 <div class="col-sm-5">
                     <input type="name" class="form-control" id="productName" name="description" value="{{ old('name', $product->description)}}">
                 </div>
@@ -27,10 +33,10 @@
                 </div>
             </div>
             <div class="mt-4 mb-5">
-                <button type="submit" class="btn btn-outline-secondary">Perbarui</button>
                 <a href="/products" class="btn btn-dark" style="background-color: #A21608;">
-                    Kembali
+                    Back
                 </a>
+                <button type="submit" class="btn btn-outline-primary">Update</button>
                 
             </div>
         </form>
